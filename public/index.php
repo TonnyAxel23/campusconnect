@@ -42,13 +42,13 @@ if (!$isLoggedIn && !in_array($page, $publicPages)) {
 $pageFile = PUBLIC_PATH . "/views/{$page}/" . ($action ?: 'index') . '.html';
 
 if (file_exists($pageFile)) {
-    // Load header
+    
     include PUBLIC_PATH . '/views/partials/header.html';
     
     // Load page content
     include $pageFile;
     
-    // Load footer
+    
     include PUBLIC_PATH . '/views/partials/footer.html';
 } else {
     // 404 Not Found
